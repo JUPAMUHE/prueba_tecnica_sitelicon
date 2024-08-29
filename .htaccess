@@ -1,0 +1,9 @@
+# .htaccess
+
+RewriteEngine On
+RewriteBase /prueba_tecnica_sitelicon/
+
+# Redirigir todas las solicitudes a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
